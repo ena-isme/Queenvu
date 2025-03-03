@@ -17,15 +17,32 @@ final class SelectHeartViewController: UIViewController {
     private let data = heartData
     private var selectedIndex: IndexPath?
     private let disposeBag = DisposeBag()
+    private let friendEmail: String
+    private let coreDataManager = CoreDataManager.shared
+    private let isMyProfile: Bool
     
     //MARK: - UI Components
     
     private let rootView = SelectHeartView()
+    private let myRootView = MyHeartView()
+    
+    //MARK: - Initializer
+    
+    init(friendEmail: String = "", isMyProfile: Bool = true) {
+        self.friendEmail = friendEmail
+        self.isMyProfile = isMyProfile
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Life Cycle
     
     override func loadView() {
-        self.view = rootView
+        self.view = isMyProfile ? myRootView : rootView
     }
     
     override func viewDidLoad() {
@@ -33,6 +50,7 @@ final class SelectHeartViewController: UIViewController {
         
         setDelegate()
         setRegister()
+        bindAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +77,19 @@ final class SelectHeartViewController: UIViewController {
     
     private func bindAction() {
         rootView.navigationView.navigationBackButton.rx.tap
+            .bind { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        rootView.navigationView.navigationCompleteButton.rx.tap
+            .bind { [weak self] in
+                sendLocalNotification(title: "역시, 공주야", body: "새로운 하트를 보내다니", after: 1)
+                self?.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        myRootView.navigationView.navigationBackButton.rx.tap
             .bind { [weak self] in
                 self?.navigationController?.popViewController(animated: true)
             }

@@ -8,16 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		E447A8932D74490D0006B4C0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E447A8922D74490D0006B4C0 /* SnapKit */; };
+		E447AA832D758F030006B4C0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E447AA822D758F030006B4C0 /* RxSwift */; };
+		E447AAE32D758F2F0006B4C0 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = E447AAE22D758F2F0006B4C0 /* RxKeyboard */; };
+		E447AAFD2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E447AAED2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E447AB602D7591870006B4C0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E447AAF12D75906E0006B4C0 /* SwiftUI.framework */; };
+		E447AB632D7591880006B4C0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E447AAEF2D75906E0006B4C0 /* WidgetKit.framework */; };
 		E4759A552D7447890031EB3B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E4759A542D7447890031EB3B /* Then */; };
-		E4759A5D2D7447CF0031EB3B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4759A5C2D7447CF0031EB3B /* RxSwift */; };
-		E4759A602D7447DC0031EB3B /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = E4759A5F2D7447DC0031EB3B /* RxKeyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E447AAFB2D75906E0006B4C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47599822D74452F0031EB3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E447AAEC2D75906E0006B4C0;
+			remoteInfo = Queenvu_WidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E447AA7D2D7589930006B4C0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E447AAFD2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E447AAED2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Queenvu_WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E447AAEF2D75906E0006B4C0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E447AAF12D75906E0006B4C0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E447AB022D7590B80006B4C0 /* Queenvu_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Queenvu_WidgetExtension.entitlements; sourceTree = "<group>"; };
 		E475998A2D74452F0031EB3B /* Queenvu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Queenvu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E447AB012D75906E0006B4C0 /* Exceptions for "Queenvu_Widget" folder in "Queenvu_WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E447AAEC2D75906E0006B4C0 /* Queenvu_WidgetExtension */;
+		};
 		E475999F2D7445300031EB3B /* Exceptions for "Queenvu" folder in "Queenvu" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -28,6 +66,14 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E447AAF32D75906E0006B4C0 /* Queenvu_Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E447AB012D75906E0006B4C0 /* Exceptions for "Queenvu_Widget" folder in "Queenvu_WidgetExtension" target */,
+			);
+			path = Queenvu_Widget;
+			sourceTree = "<group>";
+		};
 		E475998C2D74452F0031EB3B /* Queenvu */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -39,24 +85,45 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E447AAEA2D75906E0006B4C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E447AB602D7591870006B4C0 /* SwiftUI.framework in Frameworks */,
+				E447AB632D7591880006B4C0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E47599872D74452F0031EB3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E447AA832D758F030006B4C0 /* RxSwift in Frameworks */,
+				E447AAE32D758F2F0006B4C0 /* RxKeyboard in Frameworks */,
 				E4759A552D7447890031EB3B /* Then in Frameworks */,
 				E447A8932D74490D0006B4C0 /* SnapKit in Frameworks */,
-				E4759A5D2D7447CF0031EB3B /* RxSwift in Frameworks */,
-				E4759A602D7447DC0031EB3B /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E447AAEE2D75906E0006B4C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E447AAEF2D75906E0006B4C0 /* WidgetKit.framework */,
+				E447AAF12D75906E0006B4C0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E47599812D74452F0031EB3B = {
 			isa = PBXGroup;
 			children = (
+				E447AB022D7590B80006B4C0 /* Queenvu_WidgetExtension.entitlements */,
 				E475998C2D74452F0031EB3B /* Queenvu */,
+				E447AAF32D75906E0006B4C0 /* Queenvu_Widget */,
+				E447AAEE2D75906E0006B4C0 /* Frameworks */,
 				E475998B2D74452F0031EB3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E475998A2D74452F0031EB3B /* Queenvu.app */,
+				E447AAED2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +140,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E447AAEC2D75906E0006B4C0 /* Queenvu_WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E447AAFE2D75906E0006B4C0 /* Build configuration list for PBXNativeTarget "Queenvu_WidgetExtension" */;
+			buildPhases = (
+				E447AAE92D75906E0006B4C0 /* Sources */,
+				E447AAEA2D75906E0006B4C0 /* Frameworks */,
+				E447AAEB2D75906E0006B4C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E447AAF32D75906E0006B4C0 /* Queenvu_Widget */,
+			);
+			name = Queenvu_WidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = Queenvu_WidgetExtension;
+			productReference = E447AAED2D75906E0006B4C0 /* Queenvu_WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E47599892D74452F0031EB3B /* Queenvu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47599A02D7445300031EB3B /* Build configuration list for PBXNativeTarget "Queenvu" */;
@@ -79,10 +169,12 @@
 				E47599862D74452F0031EB3B /* Sources */,
 				E47599872D74452F0031EB3B /* Frameworks */,
 				E47599882D74452F0031EB3B /* Resources */,
+				E447AA7D2D7589930006B4C0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E447AAFC2D75906E0006B4C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E475998C2D74452F0031EB3B /* Queenvu */,
@@ -90,9 +182,9 @@
 			name = Queenvu;
 			packageProductDependencies = (
 				E4759A542D7447890031EB3B /* Then */,
-				E4759A5C2D7447CF0031EB3B /* RxSwift */,
-				E4759A5F2D7447DC0031EB3B /* RxKeyboard */,
 				E447A8922D74490D0006B4C0 /* SnapKit */,
+				E447AA822D758F030006B4C0 /* RxSwift */,
+				E447AAE22D758F2F0006B4C0 /* RxKeyboard */,
 			);
 			productName = Queenvu;
 			productReference = E475998A2D74452F0031EB3B /* Queenvu.app */;
@@ -108,25 +200,29 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					E447AAEC2D75906E0006B4C0 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					E47599892D74452F0031EB3B = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
 			buildConfigurationList = E47599852D74452F0031EB3B /* Build configuration list for PBXProject "Queenvu" */;
-			developmentRegion = ko;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				ko,
+				en,
 			);
 			mainGroup = E47599812D74452F0031EB3B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				E4759A532D7447890031EB3B /* XCRemoteSwiftPackageReference "Then" */,
-				E4759A5B2D7447CF0031EB3B /* XCRemoteSwiftPackageReference "RxSwift" */,
-				E4759A5E2D7447DC0031EB3B /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				E447A8912D74490D0006B4C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E447AA812D758F030006B4C0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E447AAE12D758F2F0006B4C0 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E475998B2D74452F0031EB3B /* Products */;
@@ -134,11 +230,19 @@
 			projectRoot = "";
 			targets = (
 				E47599892D74452F0031EB3B /* Queenvu */,
+				E447AAEC2D75906E0006B4C0 /* Queenvu_WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E447AAEB2D75906E0006B4C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E47599882D74452F0031EB3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +253,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E447AAE92D75906E0006B4C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E47599862D74452F0031EB3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,12 +269,85 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E447AAFC2D75906E0006B4C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E447AAEC2D75906E0006B4C0 /* Queenvu_WidgetExtension */;
+			targetProxy = E447AAFB2D75906E0006B4C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E447AAFF2D75906E0006B4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Queenvu_WidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L4327HMP3S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Queenvu_Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Queenvu_Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jiwon.is.princess.Queenvu-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E447AB002D75906E0006B4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Queenvu_WidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L4327HMP3S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Queenvu_Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Queenvu_Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jiwon.is.princess.Queenvu-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		E47599A12D7445300031EB3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Queenvu/Queenvu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L4327HMP3S;
@@ -180,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shinjiwon.Queenvu;
+				PRODUCT_BUNDLE_IDENTIFIER = jiwon.is.princess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -197,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Queenvu/Queenvu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L4327HMP3S;
@@ -213,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shinjiwon.Queenvu;
+				PRODUCT_BUNDLE_IDENTIFIER = jiwon.is.princess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -349,6 +534,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E447AAFE2D75906E0006B4C0 /* Build configuration list for PBXNativeTarget "Queenvu_WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E447AAFF2D75906E0006B4C0 /* Debug */,
+				E447AB002D75906E0006B4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E47599852D74452F0031EB3B /* Build configuration list for PBXProject "Queenvu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -378,15 +572,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		E4759A532D7447890031EB3B /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		E4759A5B2D7447CF0031EB3B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		E447AA812D758F030006B4C0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -394,12 +580,20 @@
 				minimumVersion = 6.9.0;
 			};
 		};
-		E4759A5E2D7447DC0031EB3B /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+		E447AAE12D758F2F0006B4C0 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.1;
+			};
+		};
+		E4759A532D7447890031EB3B /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -410,20 +604,20 @@
 			package = E447A8912D74490D0006B4C0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
+		E447AA822D758F030006B4C0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E447AA812D758F030006B4C0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E447AAE22D758F2F0006B4C0 /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E447AAE12D758F2F0006B4C0 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
+		};
 		E4759A542D7447890031EB3B /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E4759A532D7447890031EB3B /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		E4759A5C2D7447CF0031EB3B /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4759A5B2D7447CF0031EB3B /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		E4759A5F2D7447DC0031EB3B /* RxKeyboard */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4759A5E2D7447DC0031EB3B /* XCRemoteSwiftPackageReference "RxKeyboard" */;
-			productName = RxKeyboard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
